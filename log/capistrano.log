@@ -4513,3 +4513,285 @@ FATAL:  password authentication failed for user "postgres"
   INFO [ad0a2b6f] Running /usr/bin/env echo "Branch master (at abd622a2f3dd95aa6b286d1f33280a3feed53042) deployed as release 20160706095900 by liu" >> /home/www/dreaming/revisions.log as www@112.74.107.192
  DEBUG [ad0a2b6f] Command: cd /home/www/dreaming/releases && /usr/bin/env echo "Branch master (at abd622a2f3dd95aa6b286d1f33280a3feed53042) deployed as release 20160706095900 by liu" >> /home/www/dreaming/revisions.log
   INFO [ad0a2b6f] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-07-06 18:36:28 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d8e1cffd] Running /usr/bin/env which passenger as www@112.74.107.192
+ DEBUG [d8e1cffd] Command: /usr/bin/env which passenger
+ DEBUG [d8e1cffd] 	/usr/bin/passenger
+ DEBUG [d8e1cffd] Finished in 0.717 seconds with exit status 0 (successful).
+ DEBUG [df524504] Running [ -d ~/.rvm ] as www@112.74.107.192
+ DEBUG [df524504] Command: [ -d ~/.rvm ]
+ DEBUG [df524504] Finished in 1.248 seconds with exit status 0 (successful).
+ DEBUG [77d309f1] Running ~/.rvm/bin/rvm version as www@112.74.107.192
+ DEBUG [77d309f1] Command: ~/.rvm/bin/rvm version
+ DEBUG [77d309f1] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [77d309f1] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [9f1141db] Running ~/.rvm/bin/rvm current as www@112.74.107.192
+ DEBUG [9f1141db] Command: ~/.rvm/bin/rvm current
+ DEBUG [9f1141db] 	ruby-2.3.1
+ DEBUG [9f1141db] Finished in 0.313 seconds with exit status 0 (successful).
+ DEBUG [4e18cea0] Running ~/.rvm/bin/rvm default do ruby --version as www@112.74.107.192
+ DEBUG [4e18cea0] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [4e18cea0] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [4e18cea0] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [9bd61289] Running /usr/bin/env mkdir -p /tmp/dreaming/ as www@112.74.107.192
+ DEBUG [9bd61289] Command: /usr/bin/env mkdir -p /tmp/dreaming/
+  INFO [9bd61289] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/dreaming/git-ssh.sh 0.0%
+  INFO Uploading /tmp/dreaming/git-ssh.sh 100.0%
+  INFO [9a3c672e] Running /usr/bin/env chmod +rx /tmp/dreaming/git-ssh.sh as www@112.74.107.192
+ DEBUG [9a3c672e] Command: /usr/bin/env chmod +rx /tmp/dreaming/git-ssh.sh
+  INFO [9a3c672e] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [ced0893a] Running /usr/bin/env git ls-remote --heads https://liu7899@github.com/liu7899/dreaming.git as www@112.74.107.192
+ DEBUG [ced0893a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/dreaming/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://liu7899@github.com/liu7899/dreaming.git )
+ DEBUG [ced0893a] 	c67c899f0e957b64951b399e902da8530b4aa206	refs/heads/master
+  INFO [ced0893a] Finished in 2.134 seconds with exit status 0 (successful).
+  INFO [988e05e0] Running /usr/bin/env mkdir -p /home/www/dreaming/shared /home/www/dreaming/releases as www@112.74.107.192
+ DEBUG [988e05e0] Command: /usr/bin/env mkdir -p /home/www/dreaming/shared /home/www/dreaming/releases
+  INFO [988e05e0] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [b0d0b4bb] Running /usr/bin/env mkdir -p /home/www/dreaming/shared/log /home/www/dreaming/shared/tmp/pids /home/www/dreaming/shared/tmp/cache /home/www/dreaming/shared/tmp/sockets /home/www/dreaming/shared/vendor/bundle /home/www/dreaming/shared/public/system /home/www/dreaming/shared/public/assets as www@112.74.107.192
+ DEBUG [b0d0b4bb] Command: /usr/bin/env mkdir -p /home/www/dreaming/shared/log /home/www/dreaming/shared/tmp/pids /home/www/dreaming/shared/tmp/cache /home/www/dreaming/shared/tmp/sockets /home/www/dreaming/shared/vendor/bundle /home/www/dreaming/shared/public/system /home/www/dreaming/shared/public/assets
+  INFO [b0d0b4bb] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [f77f4bf9] Running /usr/bin/env mkdir -p /home/www/dreaming/shared/config as www@112.74.107.192
+ DEBUG [f77f4bf9] Command: /usr/bin/env mkdir -p /home/www/dreaming/shared/config
+  INFO [f77f4bf9] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [bd905837] Running [ -f /home/www/dreaming/shared/config/database.yml ] as www@112.74.107.192
+ DEBUG [bd905837] Command: [ -f /home/www/dreaming/shared/config/database.yml ]
+ DEBUG [bd905837] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [d1261810] Running [ -f /home/www/dreaming/shared/config/secrets.yml ] as www@112.74.107.192
+ DEBUG [d1261810] Command: [ -f /home/www/dreaming/shared/config/secrets.yml ]
+ DEBUG [d1261810] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [1f9b3370] Running [ -f /home/www/dreaming/shared/config/settings.yml ] as www@112.74.107.192
+ DEBUG [1f9b3370] Command: [ -f /home/www/dreaming/shared/config/settings.yml ]
+ DEBUG [1f9b3370] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [0fd374d2] Running [ -f /home/www/dreaming/current/REVISION ] as www@112.74.107.192
+ DEBUG [0fd374d2] Command: [ -f /home/www/dreaming/current/REVISION ]
+ DEBUG [0fd374d2] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [b6285cc9] Running /usr/bin/env cat /home/www/dreaming/current/REVISION 2>/dev/null as www@112.74.107.192
+ DEBUG [b6285cc9] Command: /usr/bin/env cat /home/www/dreaming/current/REVISION 2>/dev/null
+ DEBUG [b6285cc9] 	abd622a2f3dd95aa6b286d1f33280a3feed53042
+ DEBUG [b6285cc9] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [5e7c884f] Running [ -f /home/www/dreaming/repo/HEAD ] as www@112.74.107.192
+ DEBUG [5e7c884f] Command: [ -f /home/www/dreaming/repo/HEAD ]
+ DEBUG [5e7c884f] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/www/dreaming/repo
+ DEBUG [f7eac0c5] Running if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [f7eac0c5] Command: if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi
+ DEBUG [f7eac0c5] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [0ed34e3c] Running /usr/bin/env git remote update --prune as www@112.74.107.192
+ DEBUG [0ed34e3c] Command: cd /home/www/dreaming/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/dreaming/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0ed34e3c] 	Fetching origin
+ DEBUG [0ed34e3c] 	From https://github.com/liu7899/dreaming
+ DEBUG [0ed34e3c] 	   abd622a..c67c899  master     -> master
+  INFO [0ed34e3c] Finished in 3.684 seconds with exit status 0 (successful).
+ DEBUG [88022168] Running if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [88022168] Command: if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi
+ DEBUG [88022168] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [a82f9da3] Running /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637 as www@112.74.107.192
+ DEBUG [a82f9da3] Command: cd /home/www/dreaming/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/dreaming/git-ssh.sh" ; /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637 )
+  INFO [a82f9da3] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [56faf881] Running /usr/bin/env git archive master | tar -x -f - -C /home/www/dreaming/releases/20160706103637 as www@112.74.107.192
+ DEBUG [56faf881] Command: cd /home/www/dreaming/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/dreaming/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/www/dreaming/releases/20160706103637 )
+  INFO [56faf881] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [62e9afcb] Running if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [62e9afcb] Command: if test ! -d /home/www/dreaming/repo; then echo "Directory does not exist '/home/www/dreaming/repo'" 1>&2; false; fi
+ DEBUG [62e9afcb] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [cf189079] Running /usr/bin/env git rev-list --max-count=1 master as www@112.74.107.192
+ DEBUG [cf189079] Command: cd /home/www/dreaming/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/dreaming/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cf189079] 	c67c899f0e957b64951b399e902da8530b4aa206
+ DEBUG [cf189079] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [bd9c4574] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [bd9c4574] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [bd9c4574] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [a433a0c2] Running /usr/bin/env echo "c67c899f0e957b64951b399e902da8530b4aa206" >> REVISION as www@112.74.107.192
+ DEBUG [a433a0c2] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env echo "c67c899f0e957b64951b399e902da8530b4aa206" >> REVISION
+  INFO [a433a0c2] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [64087def] Running /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637/config as www@112.74.107.192
+ DEBUG [64087def] Command: /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637/config
+  INFO [64087def] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [948dcbec] Running [ -L /home/www/dreaming/releases/20160706103637/config/database.yml ] as www@112.74.107.192
+ DEBUG [948dcbec] Command: [ -L /home/www/dreaming/releases/20160706103637/config/database.yml ]
+ DEBUG [948dcbec] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [00c63696] Running [ -f /home/www/dreaming/releases/20160706103637/config/database.yml ] as www@112.74.107.192
+ DEBUG [00c63696] Command: [ -f /home/www/dreaming/releases/20160706103637/config/database.yml ]
+ DEBUG [00c63696] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [2c7f20b4] Running /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/database.yml as www@112.74.107.192
+ DEBUG [2c7f20b4] Command: /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/database.yml
+  INFO [2c7f20b4] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [92eb9c29] Running /usr/bin/env ln -s /home/www/dreaming/shared/config/database.yml /home/www/dreaming/releases/20160706103637/config/database.yml as www@112.74.107.192
+ DEBUG [92eb9c29] Command: /usr/bin/env ln -s /home/www/dreaming/shared/config/database.yml /home/www/dreaming/releases/20160706103637/config/database.yml
+  INFO [92eb9c29] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [82497f21] Running [ -L /home/www/dreaming/releases/20160706103637/config/secrets.yml ] as www@112.74.107.192
+ DEBUG [82497f21] Command: [ -L /home/www/dreaming/releases/20160706103637/config/secrets.yml ]
+ DEBUG [82497f21] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [67d68644] Running [ -f /home/www/dreaming/releases/20160706103637/config/secrets.yml ] as www@112.74.107.192
+ DEBUG [67d68644] Command: [ -f /home/www/dreaming/releases/20160706103637/config/secrets.yml ]
+ DEBUG [67d68644] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [e999e302] Running /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/secrets.yml as www@112.74.107.192
+ DEBUG [e999e302] Command: /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/secrets.yml
+  INFO [e999e302] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [12c207b5] Running /usr/bin/env ln -s /home/www/dreaming/shared/config/secrets.yml /home/www/dreaming/releases/20160706103637/config/secrets.yml as www@112.74.107.192
+ DEBUG [12c207b5] Command: /usr/bin/env ln -s /home/www/dreaming/shared/config/secrets.yml /home/www/dreaming/releases/20160706103637/config/secrets.yml
+  INFO [12c207b5] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [c7c1ce1c] Running [ -L /home/www/dreaming/releases/20160706103637/config/settings.yml ] as www@112.74.107.192
+ DEBUG [c7c1ce1c] Command: [ -L /home/www/dreaming/releases/20160706103637/config/settings.yml ]
+ DEBUG [c7c1ce1c] Finished in 0.122 seconds with exit status 1 (failed).
+ DEBUG [9a15f53d] Running [ -f /home/www/dreaming/releases/20160706103637/config/settings.yml ] as www@112.74.107.192
+ DEBUG [9a15f53d] Command: [ -f /home/www/dreaming/releases/20160706103637/config/settings.yml ]
+ DEBUG [9a15f53d] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [998f9e8f] Running /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/settings.yml as www@112.74.107.192
+ DEBUG [998f9e8f] Command: /usr/bin/env rm /home/www/dreaming/releases/20160706103637/config/settings.yml
+  INFO [998f9e8f] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [cf97ea63] Running /usr/bin/env ln -s /home/www/dreaming/shared/config/settings.yml /home/www/dreaming/releases/20160706103637/config/settings.yml as www@112.74.107.192
+ DEBUG [cf97ea63] Command: /usr/bin/env ln -s /home/www/dreaming/shared/config/settings.yml /home/www/dreaming/releases/20160706103637/config/settings.yml
+  INFO [cf97ea63] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [c532a72d] Running /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637 /home/www/dreaming/releases/20160706103637/tmp /home/www/dreaming/releases/20160706103637/vendor /home/www/dreaming/releases/20160706103637/public as www@112.74.107.192
+ DEBUG [c532a72d] Command: /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637 /home/www/dreaming/releases/20160706103637/tmp /home/www/dreaming/releases/20160706103637/vendor /home/www/dreaming/releases/20160706103637/public
+  INFO [c532a72d] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [3e1ab6bd] Running [ -L /home/www/dreaming/releases/20160706103637/log ] as www@112.74.107.192
+ DEBUG [3e1ab6bd] Command: [ -L /home/www/dreaming/releases/20160706103637/log ]
+ DEBUG [3e1ab6bd] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [119d5c61] Running [ -d /home/www/dreaming/releases/20160706103637/log ] as www@112.74.107.192
+ DEBUG [119d5c61] Command: [ -d /home/www/dreaming/releases/20160706103637/log ]
+ DEBUG [119d5c61] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [8ac4820f] Running /usr/bin/env rm -rf /home/www/dreaming/releases/20160706103637/log as www@112.74.107.192
+ DEBUG [8ac4820f] Command: /usr/bin/env rm -rf /home/www/dreaming/releases/20160706103637/log
+  INFO [8ac4820f] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [ab529211] Running /usr/bin/env ln -s /home/www/dreaming/shared/log /home/www/dreaming/releases/20160706103637/log as www@112.74.107.192
+ DEBUG [ab529211] Command: /usr/bin/env ln -s /home/www/dreaming/shared/log /home/www/dreaming/releases/20160706103637/log
+  INFO [ab529211] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [95a0f435] Running [ -L /home/www/dreaming/releases/20160706103637/tmp/pids ] as www@112.74.107.192
+ DEBUG [95a0f435] Command: [ -L /home/www/dreaming/releases/20160706103637/tmp/pids ]
+ DEBUG [95a0f435] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [61c68482] Running [ -d /home/www/dreaming/releases/20160706103637/tmp/pids ] as www@112.74.107.192
+ DEBUG [61c68482] Command: [ -d /home/www/dreaming/releases/20160706103637/tmp/pids ]
+ DEBUG [61c68482] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [329de4b2] Running /usr/bin/env ln -s /home/www/dreaming/shared/tmp/pids /home/www/dreaming/releases/20160706103637/tmp/pids as www@112.74.107.192
+ DEBUG [329de4b2] Command: /usr/bin/env ln -s /home/www/dreaming/shared/tmp/pids /home/www/dreaming/releases/20160706103637/tmp/pids
+  INFO [329de4b2] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [4a3573a5] Running [ -L /home/www/dreaming/releases/20160706103637/tmp/cache ] as www@112.74.107.192
+ DEBUG [4a3573a5] Command: [ -L /home/www/dreaming/releases/20160706103637/tmp/cache ]
+ DEBUG [4a3573a5] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [4a26ea18] Running [ -d /home/www/dreaming/releases/20160706103637/tmp/cache ] as www@112.74.107.192
+ DEBUG [4a26ea18] Command: [ -d /home/www/dreaming/releases/20160706103637/tmp/cache ]
+ DEBUG [4a26ea18] Finished in 0.122 seconds with exit status 1 (failed).
+  INFO [e1fef1e8] Running /usr/bin/env ln -s /home/www/dreaming/shared/tmp/cache /home/www/dreaming/releases/20160706103637/tmp/cache as www@112.74.107.192
+ DEBUG [e1fef1e8] Command: /usr/bin/env ln -s /home/www/dreaming/shared/tmp/cache /home/www/dreaming/releases/20160706103637/tmp/cache
+  INFO [e1fef1e8] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [b6e1856a] Running [ -L /home/www/dreaming/releases/20160706103637/tmp/sockets ] as www@112.74.107.192
+ DEBUG [b6e1856a] Command: [ -L /home/www/dreaming/releases/20160706103637/tmp/sockets ]
+ DEBUG [b6e1856a] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [1a78ed0f] Running [ -d /home/www/dreaming/releases/20160706103637/tmp/sockets ] as www@112.74.107.192
+ DEBUG [1a78ed0f] Command: [ -d /home/www/dreaming/releases/20160706103637/tmp/sockets ]
+ DEBUG [1a78ed0f] Finished in 0.120 seconds with exit status 1 (failed).
+  INFO [c3fcd6a0] Running /usr/bin/env ln -s /home/www/dreaming/shared/tmp/sockets /home/www/dreaming/releases/20160706103637/tmp/sockets as www@112.74.107.192
+ DEBUG [c3fcd6a0] Command: /usr/bin/env ln -s /home/www/dreaming/shared/tmp/sockets /home/www/dreaming/releases/20160706103637/tmp/sockets
+  INFO [c3fcd6a0] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [71de4ffd] Running [ -L /home/www/dreaming/releases/20160706103637/vendor/bundle ] as www@112.74.107.192
+ DEBUG [71de4ffd] Command: [ -L /home/www/dreaming/releases/20160706103637/vendor/bundle ]
+ DEBUG [71de4ffd] Finished in 0.119 seconds with exit status 1 (failed).
+ DEBUG [ce2e3487] Running [ -d /home/www/dreaming/releases/20160706103637/vendor/bundle ] as www@112.74.107.192
+ DEBUG [ce2e3487] Command: [ -d /home/www/dreaming/releases/20160706103637/vendor/bundle ]
+ DEBUG [ce2e3487] Finished in 0.121 seconds with exit status 1 (failed).
+  INFO [e53830f1] Running /usr/bin/env ln -s /home/www/dreaming/shared/vendor/bundle /home/www/dreaming/releases/20160706103637/vendor/bundle as www@112.74.107.192
+ DEBUG [e53830f1] Command: /usr/bin/env ln -s /home/www/dreaming/shared/vendor/bundle /home/www/dreaming/releases/20160706103637/vendor/bundle
+  INFO [e53830f1] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [f373b252] Running [ -L /home/www/dreaming/releases/20160706103637/public/system ] as www@112.74.107.192
+ DEBUG [f373b252] Command: [ -L /home/www/dreaming/releases/20160706103637/public/system ]
+ DEBUG [f373b252] Finished in 0.119 seconds with exit status 1 (failed).
+ DEBUG [39a0f5fe] Running [ -d /home/www/dreaming/releases/20160706103637/public/system ] as www@112.74.107.192
+ DEBUG [39a0f5fe] Command: [ -d /home/www/dreaming/releases/20160706103637/public/system ]
+ DEBUG [39a0f5fe] Finished in 0.122 seconds with exit status 1 (failed).
+  INFO [4e7e28aa] Running /usr/bin/env ln -s /home/www/dreaming/shared/public/system /home/www/dreaming/releases/20160706103637/public/system as www@112.74.107.192
+ DEBUG [4e7e28aa] Command: /usr/bin/env ln -s /home/www/dreaming/shared/public/system /home/www/dreaming/releases/20160706103637/public/system
+  INFO [4e7e28aa] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [335901d0] Running [ -L /home/www/dreaming/releases/20160706103637/public/assets ] as www@112.74.107.192
+ DEBUG [335901d0] Command: [ -L /home/www/dreaming/releases/20160706103637/public/assets ]
+ DEBUG [335901d0] Finished in 0.123 seconds with exit status 1 (failed).
+ DEBUG [e7910842] Running [ -d /home/www/dreaming/releases/20160706103637/public/assets ] as www@112.74.107.192
+ DEBUG [e7910842] Command: [ -d /home/www/dreaming/releases/20160706103637/public/assets ]
+ DEBUG [e7910842] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [f3e2c868] Running /usr/bin/env ln -s /home/www/dreaming/shared/public/assets /home/www/dreaming/releases/20160706103637/public/assets as www@112.74.107.192
+ DEBUG [f3e2c868] Command: /usr/bin/env ln -s /home/www/dreaming/shared/public/assets /home/www/dreaming/releases/20160706103637/public/assets
+  INFO [f3e2c868] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [a3e0917e] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [a3e0917e] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [a3e0917e] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [a11ff683] Running ~/.rvm/bin/rvm default do bundle install --path /home/www/dreaming/shared/bundle --without development test --deployment --quiet as www@112.74.107.192
+ DEBUG [a11ff683] Command: cd /home/www/dreaming/releases/20160706103637 && ~/.rvm/bin/rvm default do bundle install --path /home/www/dreaming/shared/bundle --without development test --deployment --quiet
+  INFO [a11ff683] Finished in 4.507 seconds with exit status 0 (successful).
+ DEBUG [d2bfa569] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [d2bfa569] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [d2bfa569] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [7ed746a6] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as www@112.74.107.192
+ DEBUG [7ed746a6] Command: cd /home/www/dreaming/releases/20160706103637 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [7ed746a6] 	I, [2016-07-06T18:36:57.059541 #8711]  INFO -- : Writing /home/www/dreaming/releases/20160706103637/public/assets/application-ed5e163ffe5b174bb6f3decaa5810a33818a2d4a485c3e3818dc49b0ac1a0639.js
+ DEBUG [7ed746a6] 	I, [2016-07-06T18:36:57.060348 #8711]  INFO -- : Writing /home/www/dreaming/releases/20160706103637/public/assets/application-ed5e163ffe5b174bb6f3decaa5810a33818a2d4a485c3e3818dc49b0ac1a0639.js.gz
+ DEBUG [7ed746a6] 	I, [2016-07-06T18:36:57.113655 #8711]  INFO -- : Writing /home/www/dreaming/releases/20160706103637/public/assets/application-0723cb9a2dd5a514d954f70e0fe0b89f6f9f1ae3a375c182f43b5f2b57e9c869.css
+ DEBUG [7ed746a6] 	I, [2016-07-06T18:36:57.114011 #8711]  INFO -- : Writing /home/www/dreaming/releases/20160706103637/public/assets/application-0723cb9a2dd5a514d954f70e0fe0b89f6f9f1ae3a375c182f43b5f2b57e9c869.css.gz
+  INFO [7ed746a6] Finished in 5.777 seconds with exit status 0 (successful).
+ DEBUG [a6957ed1] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [a6957ed1] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [a6957ed1] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [5aded56d] Running /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637/assets_manifest_backup as www@112.74.107.192
+ DEBUG [5aded56d] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env mkdir -p /home/www/dreaming/releases/20160706103637/assets_manifest_backup
+  INFO [5aded56d] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [900f85ce] Running /usr/bin/env ls /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest* as www@112.74.107.192
+ DEBUG [900f85ce] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env ls /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest*
+ DEBUG [900f85ce] 	/home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest-42982afab5f6fb2c3947b204a58e73c1.json
+ DEBUG [900f85ce] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [ff9467be] Running /usr/bin/env ls /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest* as www@112.74.107.192
+ DEBUG [ff9467be] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env ls /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest*
+ DEBUG [ff9467be] 	/home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest-42982afab5f6fb2c3947b204a58e73c1.json
+ DEBUG [ff9467be] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [db1544a7] Running /usr/bin/env cp /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest-42982afab5f6fb2c3947b204a58e73c1.json /home/www/dreaming/releases/20160706103637/assets_manifest_backup as www@112.74.107.192
+ DEBUG [db1544a7] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env cp /home/www/dreaming/releases/20160706103637/public/assets/.sprockets-manifest-42982afab5f6fb2c3947b204a58e73c1.json /home/www/dreaming/releases/20160706103637/assets_manifest_backup
+  INFO [db1544a7] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [16a1c3ec] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [16a1c3ec] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [16a1c3ec] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [2f9ac3ea] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as www@112.74.107.192
+ DEBUG [2f9ac3ea] Command: cd /home/www/dreaming/releases/20160706103637 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [2f9ac3ea] 	== 20160706101512 CreateUsers: migrating ======================================
+-- create_table(:users)
+   -> 0.0988s
+== 20160706101512 CreateUsers: migrated (0.0989s) =============================
+
+  INFO [2f9ac3ea] Finished in 2.890 seconds with exit status 0 (successful).
+  INFO [16799b63] Running /usr/bin/env ln -s /home/www/dreaming/releases/20160706103637 /home/www/dreaming/releases/current as www@112.74.107.192
+ DEBUG [16799b63] Command: /usr/bin/env ln -s /home/www/dreaming/releases/20160706103637 /home/www/dreaming/releases/current
+  INFO [16799b63] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [d72091cd] Running /usr/bin/env mv /home/www/dreaming/releases/current /home/www/dreaming as www@112.74.107.192
+ DEBUG [d72091cd] Command: /usr/bin/env mv /home/www/dreaming/releases/current /home/www/dreaming
+  INFO [d72091cd] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [15cfcde5] Running if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [15cfcde5] Command: if test ! -d /home/www/dreaming/releases/20160706103637; then echo "Directory does not exist '/home/www/dreaming/releases/20160706103637'" 1>&2; false; fi
+ DEBUG [15cfcde5] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [23e53689] Running /usr/bin/env passenger -v as www@112.74.107.192
+ DEBUG [23e53689] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env passenger -v
+ DEBUG [23e53689] 	Phusion Passenger 5.0.29
+ DEBUG [23e53689] 	
+ DEBUG [23e53689] Finished in 0.163 seconds with exit status 0 (successful).
+  INFO [a8257ed9] Running /usr/bin/env passenger-config restart-app /home/www/dreaming --ignore-app-not-running as www@112.74.107.192
+ DEBUG [a8257ed9] Command: cd /home/www/dreaming/releases/20160706103637 && /usr/bin/env passenger-config restart-app /home/www/dreaming --ignore-app-not-running
+ DEBUG [a8257ed9] 	Restarting /home/www/dreaming/current/public (production)
+  INFO [a8257ed9] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [675c61aa] Running /usr/bin/env ls -xtr /home/www/dreaming/releases as www@112.74.107.192
+ DEBUG [675c61aa] Command: /usr/bin/env ls -xtr /home/www/dreaming/releases
+ DEBUG [675c61aa] 	20160706083010	20160706084825	20160706085446	20160706085642	20160706085910
+20160706091601	20160706091932	20160706092226	20160706093406	20160706093705
+20160706093829	20160706094950	20160706095300	20160706095621	20160706095900
+20160706103637
+ DEBUG [675c61aa] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO Keeping 15 of 16 deployed releases on 112.74.107.192
+  INFO [98fd1270] Running /usr/bin/env rm -rf /home/www/dreaming/releases/20160706083010 as www@112.74.107.192
+ DEBUG [98fd1270] Command: /usr/bin/env rm -rf /home/www/dreaming/releases/20160706083010
+  INFO [98fd1270] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [7561cfd8] Running if test ! -d /home/www/dreaming/releases; then echo "Directory does not exist '/home/www/dreaming/releases'" 1>&2; false; fi as www@112.74.107.192
+ DEBUG [7561cfd8] Command: if test ! -d /home/www/dreaming/releases; then echo "Directory does not exist '/home/www/dreaming/releases'" 1>&2; false; fi
+ DEBUG [7561cfd8] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [03f713fe] Running /usr/bin/env echo "Branch master (at c67c899f0e957b64951b399e902da8530b4aa206) deployed as release 20160706103637 by liu" >> /home/www/dreaming/revisions.log as www@112.74.107.192
+ DEBUG [03f713fe] Command: cd /home/www/dreaming/releases && /usr/bin/env echo "Branch master (at c67c899f0e957b64951b399e902da8530b4aa206) deployed as release 20160706103637 by liu" >> /home/www/dreaming/revisions.log
+  INFO [03f713fe] Finished in 0.128 seconds with exit status 0 (successful).
